@@ -4,7 +4,7 @@ import PokemonCard from "./PokemonCard";
 const Dashboard = ({ selectedPokemon, onRemove }) => {
   return (
     <div>
-      <h2>대시보드</h2>
+      <h2>포켓몬도감</h2>
       {selectedPokemon.length === 0 ? (
         <p>선택된 포켓몬이 없습니다.</p>
       ) : (

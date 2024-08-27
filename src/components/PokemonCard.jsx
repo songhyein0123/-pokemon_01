@@ -14,9 +14,23 @@ function PokemonCard({ pokemon, onAdd, onRemove, isSelected }) {
       <p>{pokemon.korean_name}</p>
       <p>{pokemon.id}</p>
       {isSelected ? (
-        <button onClick={() => onRemove(pokemon)}>삭제</button>
+        <button
+          onClick={(e) => {
+            e.stopPropagation(); // 클릭 이벤트의 전파를 막아 상세 페이지로 이동하지 않도록 함
+            onRemove(pokemon);
+          }}
+        >
+          삭제
+        </button>
       ) : (
-        <button onClick={() => onAdd(pokemon)}>추가</button>
+        <button
+          onClick={(e) => {
+            e.stopPropagation(); // 클릭 이벤트의 전파를 막아 상세 페이지로 이동하지 않도록 함
+            onAdd(pokemon);
+          }}
+        >
+          추가
+        </button>
       )}
     </div>
   );
