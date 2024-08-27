@@ -12,26 +12,26 @@ const DashboardContainer = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-top: 20px;
-  margin: 30px;
-  height: 350px;
+  margin: 20px;
+  height: 400px;
   width: 90vw;
 `;
 
 const Title = styled.h2`
   color: #333;
-  font-size: 24px;
+  font-size: 30px;
 `;
 
 const PokemonList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  gap: 80px;
+  gap: 20px;
 `;
 
 const Dashboard = ({ selectedPokemon, onRemove }) => {
   return (
     <DashboardContainer>
-      <Title>포켓몬도감</Title>
+      <Title>나만의 포켓몬 선택하기</Title>
       {selectedPokemon.length === 0 ? (
         <p>선택된 포켓몬이 없습니다.</p>
       ) : (
