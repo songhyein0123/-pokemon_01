@@ -1,17 +1,24 @@
 import React from "react";
+import PokemonCard from "./PokemonCard";
 
-const PokemonList = ({ pokemonList, onAddPokemon }) => {
+const PokemonList = ({
+  pokemonList,
+  onAddPokemon,
+  onRemovePokemon,
+  selectedPokemon,
+}) => {
   return (
-    <ListContainer>
+    <div>
       {pokemonList.map((pokemon) => (
         <PokemonCard
           key={pokemon.id}
-          pokemon={{}}
-          onAdd={() => {}}
-          isSelected={false}
+          pokemon={pokemon}
+          onAdd={onAddPokemon}
+          onRemove={onRemovePokemon}
+          isSelected={selectedPokemon.some((p) => p.id === pokemon.id)}
         />
       ))}
-    </ListContainer>
+    </div>
   );
 };
 
