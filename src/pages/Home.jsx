@@ -9,8 +9,11 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #ffffff;
   height: 100vh;
-  background-color: #f7f7f7;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
 `;
 
 // 타이틀 스타일
